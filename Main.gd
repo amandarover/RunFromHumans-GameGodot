@@ -10,12 +10,13 @@ func _process(delta):
 	pass
 
 func game_over():
-	$ScoreTimer.stop()
-	$MobTimer.stop()
-	$HUD.update_score(score)
-	$HUD.show_game_over()
-	$Music.stop()
-	$DeathSound.play()
+	if $Player/CollisionShapeFire.disabled:
+		$ScoreTimer.stop()
+		$MobTimer.stop()
+		$HUD.update_score(score)
+		$HUD.show_game_over()
+		$Music.stop()
+		$DeathSound.play()
 
 func new_game():
 	score = 0
@@ -28,7 +29,6 @@ func new_game():
 func _on_StartTimer_timeout():
 	$MobTimer.start()
 	$ScoreTimer.start()
-
 
 func _on_ScoreTimer_timeout():
 	score += 1
@@ -43,3 +43,11 @@ func _on_MobTimer_timeout():
 	direction += rand_range(-PI/4, PI/4)
 	mob.rotation = direction
 	mob.set_linear_velocity(Vector2(rand_range(mob.MIN_SPEED, mob.MAX_SPEED), 0).rotated(direction))
+
+
+func _on_Player_body_entered():
+	pass # replace with function body
+
+
+func _on_Player_hit():
+	pass # replace with function body

@@ -22,28 +22,41 @@ func _process(delta): #run
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * SPEED
 		$AnimatedSprite.play()
-	else:
-		$AnimatedSprite.stop()
-	
+
+	$CollisionShapeFire.disabled = true
 	position += velocity * delta
 	position.x = clamp(position.x, 0, screensize.x)
 	position.y = clamp(position.y, 0, screensize.y)
 	
 	if velocity.x != 0:
-		$AnimatedSprite.animation = "right"
-		$AnimatedSprite.flip_v = false
-		$AnimatedSprite.flip_h = velocity.x < 0
+		$AnimatedSprite.animation = "left"
+		$AnimatedSprite.flip_h = velocity.x > 0
 	elif velocity.y != 0:
 		$AnimatedSprite.animation = "up"
 		$AnimatedSprite.flip_v = velocity.y > 0
+	if Input.is_action_pressed("ui_select"):
+		dracarys()
+	if Input.is_action_just_released("ui_select"):
+		dracarys_not()
 	
 func _on_Player_body_entered(body):
-	hide()
-	emit_signal("hit")
-	$CollisionShape2D.disabled = true
+	if $CollisionShapeFire.disabled:
+		hide()
+		emit_signal("hit")
+		$CollisionShape2D.disabled = true
 	
 func start(pos):
 	position = pos
 	show()
+	$AnimatedSprite.play()
 	$CollisionShape2D.disabled = false
+	$CollisionShapeFire.disabled = true
+	
+func dracarys():
+	$AnimatedSprite.animation = "up"
+	$CollisionShapeFire.disabled = false
+	
+func dracarys_not():
+	$AnimatedSprite.animation = "up"
+	$CollisionShapeFire.disabled = true
 	

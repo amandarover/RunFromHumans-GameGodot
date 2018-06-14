@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/blackdragon-2 - Copy.png-691af992ec47444e00a63edbbbfa0727.stex"
+
+[deps]
+
+source_file="res://art/blackdragon-2 - Copy.png"
+source_md5="33d407e78582f232c4b27aa492f6dd20"
+
+dest_files=[ "res://.import/blackdragon-2 - Copy.png-691af992ec47444e00a63edbbbfa0727.stex" ]
+dest_md5="0aa385566710070f9a40b90cc32608ba"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
