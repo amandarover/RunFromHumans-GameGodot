@@ -17,7 +17,7 @@ func show_game_over():
 	show_message("Game Over")
 	yield($MessageTimer, "timeout")
 	$StartButton.show()
-	$MessageLabel.text = "Dodge the Creeps!"
+	$MessageLabel.text = "Protect your Land!"
 	$MessageLabel.show()
 
 func update_score(score):
