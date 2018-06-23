@@ -12,8 +12,7 @@ func _ready():
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
 	
-func _on_Mob_fire_entered(body):
+func _on_Mob_body_entered(body):
 	hide()
 	emit_signal("hit")
 	$CollisionShape2D.disabled = true
-	

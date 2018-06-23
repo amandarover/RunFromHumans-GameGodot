@@ -1,17 +1,21 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Mob.gd" type="Script" id=1]
-[ext_resource path="res://art/campbellssoup-copy.png" type="Texture" id=2]
+[ext_resource path="res://art/campbellssoup-copy.png" type="Texture" id=1]
+[ext_resource path="res://art/pepsi.png" type="Texture" id=2]
 [ext_resource path="res://art/cake_pixel.png" type="Texture" id=3]
 [ext_resource path="res://art/yoshiegg.png" type="Texture" id=4]
-[ext_resource path="res://art/pepsi.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "tomato",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "pepsi",
 "speed": 4.0
 }, {
 "frames": [ ExtResource( 3 ) ],
@@ -23,11 +27,6 @@ animations = [ {
 "loop": true,
 "name": "egg",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "pepsi",
-"speed": 4.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -58,13 +57,6 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
-script = ExtResource( 1 )
-_sections_unfolded = [ "Collision" ]
-__meta__ = {
-"_edit_group_": true
-}
-MIN_SPEED = 150
-MAX_SPEED = 250
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
@@ -81,13 +73,12 @@ position = Vector2( 3.40868, 6.50352 )
 rotation = 1.5708
 scale = Vector2( 3.82652, 2.0583 )
 shape = SubResource( 2 )
-_sections_unfolded = [ "Pause", "Transform" ]
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="2"]
 
 rect = Rect2( -10, -10, 20, 20 )
 
-[connection signal="hit" from="." to="." method="_on_Mob_fire_entered"]
+[connection signal="body_entered" from="." to="." method="_on_Mob_body_entered"]
 
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
 

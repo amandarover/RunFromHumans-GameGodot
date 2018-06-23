@@ -53,7 +53,7 @@ func start(pos):
 	$CollisionShapeFire.disabled = true
 	
 func dracarys():
-	$AnimatedSprite.animation = "up"
+	$AnimatedSprite.animation = "fire_up"
 	$CollisionShapeFire.disabled = false
 	
 func dracarys_not():
