@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Defeat - gameover.ogg-a4da128240abb0064b3f94adf6479f19.oggstr"
+
+[deps]
+
+source_file="res://art/Defeat - gameover.ogg"
+source_md5="0599ed2290da0e6e5c5eb3306eddf90e"
+
+dest_files=[ "res://.import/Defeat - gameover.ogg-a4da128240abb0064b3f94adf6479f19.oggstr" ]
+dest_md5="cbf4e653050dcf8ff9553379c070b4a7"
+
+[params]
+
+loop=true
+loop_offset=0

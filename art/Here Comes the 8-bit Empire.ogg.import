@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Here Comes the 8-bit Empire.ogg-88d25abf1a25d9492f8ac0594e43fdb6.oggstr"
+
+[deps]
+
+source_file="res://art/Here Comes the 8-bit Empire.ogg"
+source_md5="f04c9596b713155432298bc6b65fb2d1"
+
+dest_files=[ "res://.import/Here Comes the 8-bit Empire.ogg-88d25abf1a25d9492f8ac0594e43fdb6.oggstr" ]
+dest_md5="3c573d4f0910a998ca90587d6d38f026"
+
+[params]
+
+loop=true
+loop_offset=0
