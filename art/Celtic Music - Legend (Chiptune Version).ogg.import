@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Celtic Music - Legend (Chiptune Version).ogg-c1902784558e06c13f7e5133097a0650.oggstr"
+
+[deps]
+
+source_file="res://art/Celtic Music - Legend (Chiptune Version).ogg"
+source_md5="c47e1986a52729753b9d95d9772bbfd8"
+
+dest_files=[ "res://.import/Celtic Music - Legend (Chiptune Version).ogg-c1902784558e06c13f7e5133097a0650.oggstr" ]
+dest_md5="e9cfec3181b5fa78c9734acec1b0abe1"
+
+[params]
+
+loop=true
+loop_offset=0

@@ -25,6 +25,7 @@ func new_game():
 	$HUD.update_score(score)
 	$HUD.show_message("Get Ready!")
 	$Music.play()
+	$DeathSound.stop()
 
 func _on_StartTimer_timeout():
 	$MobTimer.start()
@@ -35,14 +36,10 @@ func _on_ScoreTimer_timeout():
 	$HUD.update_score(score)
 
 func _on_MobTimer_timeout():
-	$MobPath/MobSpawnLocation.set_offset(randi())
+	#$MobPath/MobSpawnLocation.set_offset(randi())
 	var mob = Mob.instance()
 	add_child(mob)
-	var direction = $MobPath/MobSpawnLocation.rotation + PI/2
-	mob.position = $MobPath/MobSpawnLocation.position
-	direction += rand_range(-PI/4, PI/4)
-	mob.rotation = direction
-	mob.set_linear_velocity(Vector2(rand_range(mob.MIN_SPEED, mob.MAX_SPEED), 0).rotated(direction))
+	mob.set_position(Vector2(rand_range(0,450),0))
 
 
 func _on_Player_body_entered():

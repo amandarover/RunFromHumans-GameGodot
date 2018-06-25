@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pepsi.png-38680d76748bd5b6bca3841d6d534a0f.stex"
+path="res://.import/flecha.png-2f08f6accb3537a02816d8ff0958893a.stex"
 
 [deps]
 
-source_file="res://art/pepsi.png"
-source_md5="54f087575dc7663d11cc07d61df5eb77"
+source_file="res://art/flecha.png"
+source_md5="2959cc10dbf4c4e2f68acedad2d53c91"
 
-dest_files=[ "res://.import/pepsi.png-38680d76748bd5b6bca3841d6d534a0f.stex" ]
-dest_md5="65e76458bedb93a1dc6b4b26a12eed1d"
+dest_files=[ "res://.import/flecha.png-2f08f6accb3537a02816d8ff0958893a.stex" ]
+dest_md5="f31a23b22a72ab849e7bfb04ecd98510"
 
 [params]
 
